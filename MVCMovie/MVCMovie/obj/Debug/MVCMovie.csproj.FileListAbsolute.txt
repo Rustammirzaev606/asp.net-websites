@@ -67,3 +67,7 @@ D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\bin\Microsoft.Owi
 D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.csprojResolveAssemblyReference.cache
 D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.dll
 D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.pdb
+D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.Migrations.Initial.resources
+D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.csproj.GenerateResource.Cache
+D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.Migrations.Initial1.resources
+D:\CC4 Project (Repository)\asp.net-websites\MVCMovie\MVCMovie\obj\Debug\MVCMovie.Migrations.DataAnnotations.resources
