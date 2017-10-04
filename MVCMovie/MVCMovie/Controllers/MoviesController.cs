@@ -70,6 +70,7 @@ namespace MVCMovie.Controllers
         }
 
         // GET: Movies/Details/5
+        
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -82,7 +83,10 @@ namespace MVCMovie.Controllers
                 return HttpNotFound();
             }
             return View(movie);
+
         }
+
+        
 
         // GET: Movies/Create
 
@@ -96,10 +100,11 @@ namespace MVCMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Price,Rating,Genre")] Movie movie)  //MISSING GENRE
         {
             if (ModelState.IsValid)
             {
+                //movie.Genre = "boring";
                 db.Movies.Add(movie);
                 db.SaveChanges();
                 return RedirectToAction("Index");
