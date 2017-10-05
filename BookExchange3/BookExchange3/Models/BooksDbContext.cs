@@ -13,5 +13,7 @@ namespace BookExchange3.Models
 
         public System.Data.Entity.DbSet<BookExchange3.Models.Reserve> Reserves { get; set; }
 
+        public System.Data.Entity.DbSet<BookExchange3.Models.Request> Requests { get; set; }
+
     }
 }

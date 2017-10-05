@@ -172,6 +172,7 @@
     <Compile Include="Controllers\booksdbcontext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RequestsController.cs" />
     <Compile Include="Controllers\ReservesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
@@ -181,12 +182,17 @@
     <Compile Include="Migrations\201710051329551_newMigration.Designer.cs">
       <DependentUpon>201710051329551_newMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710051637274_new1.cs" />
+    <Compile Include="Migrations\201710051637274_new1.Designer.cs">
+      <DependentUpon>201710051637274_new1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\BooksDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Reserve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -259,6 +265,12 @@
     <Content Include="Views\Reserves\Index.cshtml" />
     <Content Include="Views\Books\Confirmation.cshtml" />
     <Content Include="Views\Reserves\Confirmed.cshtml" />
+    <Content Include="Views\Requests\Create.cshtml" />
+    <Content Include="Views\Requests\Delete.cshtml" />
+    <Content Include="Views\Requests\Details.cshtml" />
+    <Content Include="Views\Requests\Edit.cshtml" />
+    <Content Include="Views\Requests\Index.cshtml" />
+    <Content Include="Views\Requests\RequestConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +287,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710051329551_newMigration.resx">
       <DependentUpon>201710051329551_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710051637274_new1.resx">
+      <DependentUpon>201710051637274_new1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
