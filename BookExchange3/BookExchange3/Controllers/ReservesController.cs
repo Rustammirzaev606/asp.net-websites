@@ -35,15 +35,23 @@ namespace BookExchange3.Controllers
             return View(reserve);
         }
 
-        public ActionResult RequestConfirmation(DateTime endDate)
-        {
-            ViewBag.Message = endDate;
-            return View();
-        }
+        //public ActionResult RequestConfirmation()
+        //{
+        //    ViewBag.Message = DateTime.Now.AddDays(3);
+        //    return View();
+        //}
 
         // GET: Reserves/Create
-        public ActionResult Create()
+        public ActionResult Confirmed()
         {
+            return View();
+           
+        }
+
+        public ActionResult Reserve()
+        {
+            ViewBag.Date = DateTime.Now.AddDays(3);
+            
             return View();
         }
 
@@ -52,7 +60,7 @@ namespace BookExchange3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Email, book")] Reserve reserve, int id)
+        public ActionResult Reserve([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Email, book")] Reserve reserve, int id)
         {
             //reserve.book = id;
             if (ModelState.IsValid)
@@ -67,7 +75,7 @@ namespace BookExchange3.Controllers
                 
                 db.Reserves.Add(reserve);
                 db.SaveChanges();
-                return RedirectToAction("ReserveConfirmation", new {i = reserve.ReserveEndDate });
+                return RedirectToAction("Confirmed");
             }
 
             return View(reserve);

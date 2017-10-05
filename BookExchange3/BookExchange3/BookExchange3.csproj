@@ -252,13 +252,13 @@
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Books\ListOfBooks.cshtml" />
-    <Content Include="Views\Reserves\Create.cshtml" />
+    <Content Include="Views\Reserves\Reserve.cshtml" />
     <Content Include="Views\Reserves\Delete.cshtml" />
     <Content Include="Views\Reserves\Details.cshtml" />
     <Content Include="Views\Reserves\Edit.cshtml" />
     <Content Include="Views\Reserves\Index.cshtml" />
     <Content Include="Views\Books\Confirmation.cshtml" />
-    <Content Include="Views\Reserves\RequestConfirmation.cshtml" />
+    <Content Include="Views\Reserves\Confirmed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

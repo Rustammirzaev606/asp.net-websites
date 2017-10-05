@@ -26,6 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.book)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReserveEndDate)
+        </th>
         <th></th>
     </tr>
 
@@ -44,7 +47,10 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.book)
+            @Html.DisplayFor(modelItem => item.book.ISBN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReserveEndDate)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
