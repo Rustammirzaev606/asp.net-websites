@@ -18,9 +18,9 @@ namespace BookExchange3.Models
 
         public string Genre { get; set; }
         [Required]
-        [RegularExpression(@"^[0-9]*$")]
-        [StringLength(13, MinimumLength = 13)]
-        public int ISBN { get; set; }
+        
+        
+        public double ISBN { get; set; }
         public bool? Available { get; set; }
         public bool? Taken { get; set; }
 

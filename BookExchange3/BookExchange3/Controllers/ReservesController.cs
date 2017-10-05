@@ -35,6 +35,12 @@ namespace BookExchange3.Controllers
             return View(reserve);
         }
 
+        public ActionResult RequestConfirmation(DateTime endDate)
+        {
+            ViewBag.Message = endDate;
+            return View();
+        }
+
         // GET: Reserves/Create
         public ActionResult Create()
         {
@@ -52,11 +58,16 @@ namespace BookExchange3.Controllers
             if (ModelState.IsValid)
             {
                var bookReserved = db.Books.Where(i => i.ID == id).First();
+               
                 reserve.book = bookReserved;
+                reserve.ReserveBeginDate = DateTime.Now;
+                reserve.ReserveEndDate = DateTime.Now.AddDays(3);
 
+                int x = reserve.ID;
+                
                 db.Reserves.Add(reserve);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ReserveConfirmation", new {i = reserve.ReserveEndDate });
             }
 
             return View(reserve);

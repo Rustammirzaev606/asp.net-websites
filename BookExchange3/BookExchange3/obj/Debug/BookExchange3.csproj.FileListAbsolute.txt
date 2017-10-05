@@ -66,7 +66,6 @@ D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\bin\Mic
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.dll
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.pdb
-D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations._1.resources
-D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.csproj.GenerateResource.Cache
-D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations._2.resources
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.csprojResolveAssemblyReference.cache
+D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations.newMigration.resources
+D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.csproj.GenerateResource.Cache
