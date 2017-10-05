@@ -33,7 +33,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.Where(x => x.Taken == false) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
