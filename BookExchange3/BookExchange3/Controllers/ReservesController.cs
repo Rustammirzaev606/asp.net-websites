@@ -19,7 +19,7 @@ namespace BookExchange3.Controllers
         {
             return View(db.Reserves.ToList());
         }
-
+        
         // GET: Reserves/Details/5
         public ActionResult Details(int? id)
         {
@@ -50,7 +50,7 @@ namespace BookExchange3.Controllers
 
         public ActionResult Reserve()
         {
-            ViewBag.Date = DateTime.Now.AddDays(3);
+            
             
             return View();
         }
@@ -67,6 +67,7 @@ namespace BookExchange3.Controllers
             {
                var bookReserved = db.Books.Where(i => i.ID == id).First();
                
+
                 reserve.book = bookReserved;
                 reserve.ReserveBeginDate = DateTime.Now;
                 reserve.ReserveEndDate = DateTime.Now.AddDays(3);
@@ -95,6 +96,8 @@ namespace BookExchange3.Controllers
             }
             return View(reserve);
         }
+
+        
 
         // POST: Reserves/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -146,5 +149,7 @@ namespace BookExchange3.Controllers
             }
             base.Dispose(disposing);
         }
+
+       
     }
 }
