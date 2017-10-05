@@ -6,9 +6,21 @@
 
 <h2>ListOfBooks</h2>
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+<p>    
+    @using (Html.BeginForm())
+    {
+    <p>
+        Title: @Html.TextBox("searchTitle") <br />
+        Author: @Html.TextBox("searchAuthor") <br />
+        Genre:  @Html.TextBox("searchGenre")<br />
+        ISBN: @Html.TextBox("searchISBN")<br />
+        <input type="submit" value="Filter" />
+    </p>
+    }
+
+    </p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -23,12 +35,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ISBN)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Available)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Taken)
-        </th>*@
+       
         <th></th>
     </tr>
 
@@ -49,18 +56,7 @@
         <td>
             @Html.ActionLink("Reserve","Reserve", "Reserves", new { id = item.ID }, null)
 
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Available)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Taken)
-        </td>*@
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>*@
+        </td>        
     </tr>
 }
 

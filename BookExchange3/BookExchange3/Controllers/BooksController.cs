@@ -15,9 +15,40 @@ namespace BookExchange3.Controllers
         private BooksDbContext db = new BooksDbContext();
 
         // GET: Books
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Books.ToList());
+        //}
+        public ActionResult ListOfBooks(string searchGenre, string searchAuthor, string searchTitle, string searchISBN)
         {
-            return View(db.Books.ToList());
+            
+
+            var book = from m in db.Books
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchGenre))
+            {
+                book = book.Where(s => s.Genre.Contains(searchGenre));
+            }
+
+            if (!string.IsNullOrEmpty(searchAuthor))
+            {
+                book = book.Where(x => x.Author.Contains(searchAuthor));
+            }
+
+            if (!string.IsNullOrEmpty(searchTitle))
+            {
+                book = book.Where(y => y.Title.Contains(searchTitle));
+            }
+
+            if (!string.IsNullOrEmpty(searchISBN))
+            {
+                double searchISBN2;
+                Double.TryParse(searchISBN, out searchISBN2);
+                book = book.Where(z => z.ISBN == searchISBN2);
+            }
+
+            return View(book);
         }
 
         // GET: Books/Details/5
@@ -129,9 +160,9 @@ namespace BookExchange3.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult ListOfBooks()
-        {
-            return View(db.Books.ToList());
-        }
+        //public ActionResult ListOfBooks()
+        //{
+        //    return View(db.Books.ToList());
+        //}
     }
 }
