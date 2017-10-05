@@ -29,7 +29,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Taken)
         </th>*@
-        @*<th></th>*@
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -45,6 +45,10 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ISBN)
+        </td>
+        <td>
+            @Html.ActionLink("Reserve","Create", "Reserves", new { id = item.ID }, null)
+
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.Available)

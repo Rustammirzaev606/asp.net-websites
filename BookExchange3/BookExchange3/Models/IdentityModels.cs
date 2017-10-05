@@ -30,6 +30,8 @@ namespace BookExchange3.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<BookExchange3.Models.Books> Books { get; set; }
+        //public System.Data.Entity.DbSet<BookExchange3.Models.Books> Books { get; set; }
+
+        //public System.Data.Entity.DbSet<BookExchange3.Models.Reserve> Reserves { get; set; }
     }
 }

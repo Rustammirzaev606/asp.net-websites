@@ -12,7 +12,7 @@ namespace BookExchange3.Controllers
 {
     public class BooksController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private BooksDbContext db = new BooksDbContext();
 
         // GET: Books
         public ActionResult Index()
@@ -36,7 +36,12 @@ namespace BookExchange3.Controllers
         }
 
         // GET: Books/Create
-        public ActionResult Create()
+        public ActionResult Donate()
+        {
+            return View();
+        }
+
+        public ActionResult Confirmation()
         {
             return View();
         }
@@ -46,13 +51,13 @@ namespace BookExchange3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Author,Genre,ISBN,Available = false,Taken = false")] Books books)
+        public ActionResult Donate([Bind(Include = "ID,Title,Author,Genre,ISBN,Available = false,Taken = false")] Books books)
         {
             if (ModelState.IsValid)
             {
                 db.Books.Add(books);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Confirmation");
             }
 
             return View(books);

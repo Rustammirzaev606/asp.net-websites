@@ -4,21 +4,19 @@
 
 <div class="jumbotron">
     <h2>A GREAT BOOK BEGINS WITH AN IDEA; A GREAT LIFE, WITH A DETERMINATION.</h2>
-    @*<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>*@
+    
     <p class="lead">By donating books you give other people the opportunity to discover for themselves that ONE book that could change their life.</p>
-    <p><a class="btn btn-primary btn-lg" @Html.ActionLink("Donate", "Books")  </a></p>
+    <p><a class="btn btn-primary btn-lg" url=@Html.ActionLink("Donate", "Donate", "Books")</a></p>
     @*Donate &raquo*@
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Get a FREE book</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Enlight yourself!
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" url=@Html.ActionLink("Get a book","ListOfBooks","Books")</a></p>
     </div>
     <div class="col-md-4">
         <h2>Get more libraries</h2>
