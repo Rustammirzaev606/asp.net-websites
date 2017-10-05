@@ -15,10 +15,10 @@ namespace BookExchange3.Controllers
         private BooksDbContext db = new BooksDbContext();
 
         // GET: Books
-        //public ActionResult Index()
-        //{
-        //    return View(db.Books.ToList());
-        //}
+        public ActionResult Index()
+        {
+            return View(db.Books.ToList());
+        }
         public ActionResult ListOfBooks(string searchGenre, string searchAuthor, string searchTitle, string searchISBN)
         {
             

@@ -39,7 +39,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model.Where(x => x.Available == true)) {
+@foreach (var item in Model.Where(x => x.Available == true && x.Taken == false)) {
+   
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
