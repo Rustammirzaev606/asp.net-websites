@@ -4,11 +4,24 @@
     ViewBag.Title = "Book List";
 }
 
-<h2>Index</h2>
+<h2>Current list of Books</h2>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<p>
+    @using (Html.BeginForm())
+    {
+    <p>
+        Title:  @Html.TextBox("searchTitle")
+        Author: @Html.TextBox("searchAuthor")
+        Genre:  @Html.TextBox("searchGenre")
+        ISBN:   @Html.TextBox("searchISBN")
+        <input type="submit" value="Filter" />
+    </p>
+    }
 <table class="table">
     <tr>
         <th>
