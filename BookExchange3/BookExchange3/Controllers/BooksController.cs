@@ -14,6 +14,39 @@ namespace BookExchange3.Controllers
     {
         private BooksDbContext db = new BooksDbContext();
 
+        public BooksController()
+        {     
+
+
+            var quearyTemp1 = from r in db.Reserves
+                              where r.ReserveBeginDate.Day - DateTime.Now.Day < -3
+                              join b in db.Books
+                              on r.ID equals b.ID
+                              select b;
+            foreach (Books y in quearyTemp1)
+            {
+                if(y.Taken == false)
+                {
+                    y.Available = true;
+                }
+                
+            }
+            db.SaveChanges();
+
+            var queryTemp2 = from r in db.Reserves
+                             where r.ReserveBeginDate.Day - DateTime.Now.Day < -3
+                             select r;
+            foreach (Reserve u in queryTemp2)
+            {
+                db.Reserves.Remove(u);
+            }
+
+
+
+            db.SaveChanges();
+        }
+
+
         // GET: Books
         public ActionResult Index()
         {
