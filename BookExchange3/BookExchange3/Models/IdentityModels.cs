@@ -18,20 +18,22 @@ namespace BookExchange3.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class BooksDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public BooksDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public static BooksDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new BooksDbContext();
         }
 
-        //public System.Data.Entity.DbSet<BookExchange3.Models.Books> Books { get; set; }
+        public System.Data.Entity.DbSet<BookExchange3.Models.Books> Books { get; set; }
 
-        //public System.Data.Entity.DbSet<BookExchange3.Models.Reserve> Reserves { get; set; }
+        public System.Data.Entity.DbSet<BookExchange3.Models.Reserve> Reserves { get; set; }
+
+        public System.Data.Entity.DbSet<BookExchange3.Models.Request> Requests { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace BookExchange3.Controllers
     public class RoleController : Controller
     {
         // GET: Role
-        ApplicationDbContext context = new ApplicationDbContext();
+        BooksDbContext context = new BooksDbContext();
 
         public ActionResult Index()
         {

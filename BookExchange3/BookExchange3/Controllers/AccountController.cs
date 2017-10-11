@@ -18,10 +18,10 @@ namespace BookExchange3.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        ApplicationDbContext context;
+        BooksDbContext context;
         public AccountController()
         {
-            context = new ApplicationDbContext();
+            context = new BooksDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

@@ -19,7 +19,7 @@ namespace BookExchange3
         // In this method we will create default User roles and Admin user for login   
         private void createRolesandUsers()
         {
-            ApplicationDbContext context = new ApplicationDbContext();
+            BooksDbContext context = new BooksDbContext();
 
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));

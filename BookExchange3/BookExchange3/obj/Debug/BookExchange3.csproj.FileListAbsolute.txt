@@ -70,3 +70,4 @@ D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Deb
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations.newMigration.resources
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.csproj.GenerateResource.Cache
 D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations.new1.resources
+D:\CC4 Project (Repository)\asp.net-websites\BookExchange3\BookExchange3\obj\Debug\BookExchange3.Migrations._2.resources
