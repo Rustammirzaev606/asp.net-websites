@@ -9,30 +9,33 @@ using System.Web.Mvc;
 
 namespace BookExchange3.Controllers
 {
-    public class RoleController : Controller
+    public class usersController : Controller
     {
-        // GET: Role
-        ApplicationDbContext context = new ApplicationDbContext();
-
+        // GET: users
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
         public ActionResult Index()
         {
-
             if (User.Identity.IsAuthenticated)
             {
+                var user = User.Identity;
+                ViewBag.Name = user.Name;
 
+                ViewBag.displayMenu = "No";
 
-                if (!isAdminUser())
+                if (isAdminUser())
                 {
-                    return RedirectToAction("Index", "Home");
+                    ViewBag.displayMenu = "Yes";
                 }
+                return View();
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                ViewBag.Name = "Not Logged IN";
             }
-
-            var Roles = context.Roles.ToList();
-            return View(Roles);
+            return View();
 
         }
 
@@ -40,7 +43,8 @@ namespace BookExchange3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                var user = User.Identity;                
+                var user = User.Identity;
+                ApplicationDbContext context = new ApplicationDbContext();
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
                 var s = UserManager.GetRoles(user.GetUserId());
                 if (s[0].ToString() == "Admin")
